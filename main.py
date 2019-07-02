@@ -22,27 +22,27 @@ def Valid_Form():
     email_error=""
 
     if len(user_name) < 3:
-        user_name_error ="User name is less then 8 characters"
+        user_name_error ="User name is less then 3 characters"
         user_name=""
     if len(user_name) > 20:
             user_name_error ="User name is more then 20 character"
             user_name=""
-    if  " " in user_name == True:
+    if  " " in user_name:
         user_name_error ="User name contains a space"
         user_name=""
             
-    if len(password) < 8:
-        password_error ="Password is less then 8 characters"
+    if len(password) < 3:
+        password_error ="Password is less then 3 characters"
         password=""
-    if len(password) > 15:
+    if len(password) > 20:
             password_error ="Password is more then 20 character"
             password=""
-    if  " " in password == True:
+    if  " " in password:
         password_error ="Password contains a space"  
         password=""
     
     if password !=verify_password:
-        verify_password_error =" Your passwords to not match"
+        verify_password_error =" Your passwords do not match"
         password=""
         verify_password=""
     
